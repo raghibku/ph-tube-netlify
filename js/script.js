@@ -3,6 +3,7 @@ const categoryContainer = document.getElementById("categories");
 const blankVid = document.getElementById("blankVid");
 let isSortByViews = false;
 let catID=1000;
+let butArr=[1000,1000];
 
 const loadCategories = async() => {
     
@@ -24,7 +25,7 @@ const createButton = (item) => {
     let button = document.createElement('button');
     button.id = item.category_id;
     button.innerText = `${item.category}`;
-    button.classList.add("px-4", "py-2","mx-1","my-2","md:mx-4", "bg-gray-300","rounded-md");
+    button.classList.add("px-4", "py-2","mx-1","my-2","md:mx-4", "bg-gray-300","rounded-md","text-black");
     categoryContainer.appendChild(button);
     button.addEventListener("click",(()=>{
         filterVideos(item.category_id);

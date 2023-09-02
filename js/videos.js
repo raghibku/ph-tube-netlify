@@ -1,5 +1,5 @@
 
-
+let count=0;
 const loadVideo = async (catID=1000,isSortByViews=false) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${catID}`);
     const data = await response.json();
@@ -12,7 +12,31 @@ const loadVideo = async (catID=1000,isSortByViews=false) => {
         createVideo(videos);
     }
 
+    if(catID!=butArr[1]){
+        if(butArr.length<2){
+            butArr.push(catID);
+        }
+        else{
+            butArr.shift();
+            butArr.push(catID);
+        }
+    }
+
+    let but=document.getElementById(butArr[1]);
+    if(but.classList.contains("bg-gray-300")){
+        but.classList.replace("bg-gray-300","bg-red-500");
+        but.classList.replace("text-black","text-white");
+    }
+    console.log(but);
     
+    let prevBut=document.getElementById(butArr[0]);
+    if(count!=0 && prevBut.classList.contains("bg-red-500")){
+        prevBut.classList.replace("bg-red-500","bg-gray-300");
+        prevBut.classList.replace("text-white","text-black");
+    }
+    console.log(prevBut);
+    
+    count++;
 }
 loadVideo(catID,isSortByViews);
 
