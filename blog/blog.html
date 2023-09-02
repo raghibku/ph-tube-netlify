@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fontManrope{
+            font-family: 'Manrope', sans-serif;
+        }
+        p{
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 30px; 
+            color: cyan;
+        }
+        pre{
+            font-size: 18px;
+            font-weight: 400;
+        }
+        span{
+            font-size: 20px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="fontManrope my-14 mx-40 bg-slate-800 text-white">
+    <section id="blogPage" class="w-full">
+        <div class="flex justify-center items-center w-full ">
+            <div class="flex flex-col justify-center items-center w-full">
+                <div>
+                    <p class="mb-12">Discuss the scope of var, let, and const</p>
+                    <pre style="white-space: pre-wrap">
+<span class="text-yellow-300">Scope of var : </span> var declarations are both globally and locally/function scoped. The variables declared with var can be re-declared and updated which can lead to some problems as one can re-declare the same variable by mistake and instead of showing an error it will give the wrong result.
+
+<span class="text-yellow-300">Scope of let :</span> let is block scoped, so a variable declared in a block with let  is only available for use within that block and can be updated but not re-declared so it doesn't have the similar problem like var.
+
+<span class="text-yellow-300">Scope of const :</span> Can only be accessed within the block they were declared. A variable declared with const remains the same within its scope. It cannot be updated or re-declared.
+                    </pre>
+                </div>
+                <div >
+                    <p class="mb-12">Tell us the use cases of null and undefined</p>
+                    <pre style="white-space: pre-wrap;">
+<span class="text-yellow-300">Use cases of null:</span> 
+
+1. When a variable is declared but not assigned any value, its value is considered to be null. This is is used to initialize variables that will be assigned a value later in the program.
+
+2. When a function does not return any value, it may return null to indicate that no value was returned. This can be useful in cases where the function may not always have a valid value to return.
+
+3.Null values are commonly used in databases to represent missing or unknown data.
+
+4.Null values can be used to represent the absence of a particular property or attribute in an object. 
+
+<span class="text-yellow-300">Use cases of undefined</span> 
+
+1.When working with objects,the optional chaining operator (?.) is used to safely access properties and methods that may be undefined. The optional chaining operator returns undefined instead of throwing an error if any of the intermediate values are undefined.
+
+2.Assigning undefined to uninitialized variables can be helpful for preventing errors. 
+                        
+                    </pre>
+                </div>
+                <div>
+                    <p class="mb-12">What do you mean by REST API?</p>
+                    <pre style="white-space: pre-wrap;">
+A REST API is simple architectural style for an API which is used for building and interacting with web services. It uses HTTP methods like GET, POST, PUT, DELETE which refers to the reading, updating, creating and deleting of operations concerning resources to enable communication between clients and servers. It uses URLs to represent resources.
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
