@@ -35,6 +35,7 @@ const createButton = (item) => {
 }
 const filterVideos = (catID) => {
     videoContainer.innerHTML='';
+    isSortByViews=false;
     loadVideo(catID,isSortByViews);
     if(blankVid.classList.contains("block")){
         blankVid.classList.replace("block","hidden"); 
